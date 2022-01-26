@@ -1,16 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+	<nav class="navbar fixed-top navbar-light bg-light">
+		<a class="navbar-brand" href="#">Fixed top</a>
+
+		<ul class="nav">
+			<li class="nav-item">
+				<!-- <a class="nav-link active" href="#">List</a> -->
+				<router-link to="/list">리스트페이지</router-link>
+			</li>
+			<li class="nav-item">
+				<!-- <a class="nav-link" href="#">Link</a> -->
+				<router-link to="/home">홈페이지</router-link>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled">Disabled</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<router-view :vuelog_data="vuelog_data"></router-view>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vuelog_data from './assets/data/vuelog_data.js'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	data() {
+		return {
+			vuelog_data: vuelog_data,
+		}
+	},
+	components: {
+	}
 }
 </script>
 
