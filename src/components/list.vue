@@ -1,6 +1,6 @@
 <template>
 	<div v-for="(vuelog_item, i) in vuelog_data" :key="i">
-		<h5>{{ vuelog_item.title }}</h5>
+		<h5 @click="$router.push('/detail/' + i)">{{ vuelog_item.title }}</h5>
 		<p>{{ vuelog_item.date }}</p>
 	</div>
 </template>
