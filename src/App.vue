@@ -21,6 +21,8 @@
 		</ul>
 	</nav>
 
+	<home />
+
 
 	<router-view :vuelog_data="vuelog_data"></router-view>
 
@@ -28,6 +30,7 @@
 
 <script>
 import vuelog_data from './assets/data/vuelog_data.js'
+import home from './components/home.vue'
 
 
 export default {
@@ -38,6 +41,7 @@ export default {
 		}
 	},
 	components: {
+		home: home,
 	}
 }
 </script>
